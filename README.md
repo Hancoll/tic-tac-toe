@@ -68,8 +68,8 @@ MakeMove
 
 ```
 Guid lobbyId
-byte row
-byte column
+int row
+int column
 ```
 
 ### RecieveField

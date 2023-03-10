@@ -5,11 +5,14 @@ namespace Game.Core;
 
 internal static class Game
 {
-    private const byte GridSize = 3;
+    private const int GridSize = 3;
 
-    public static void MakeMove(CellValue[,] field, byte row, byte column, CellValue cellValue)
+    public static void MakeMove(CellValue[,] field, int row, int column, CellValue cellValue)
     {
-        if(row >= GridSize || column >= GridSize)
+        if(row >= GridSize || row < 0)
+            throw new InvalidMoveException();
+
+        if (column >= GridSize || column < 0)
             throw new InvalidMoveException();
 
         if (field[row, column] != CellValue.Empty)

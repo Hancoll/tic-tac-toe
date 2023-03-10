@@ -18,7 +18,7 @@ internal class LobbyService : ILobbyService
         _lobbiesManager.GetLobby(lobbyId).AddPlayer(playerId);
     }
 
-    public bool MakeMove(Guid lobbyId, string playerId, byte row, byte column, out CellValue[,] field, out CellValue? winner)
+    public bool MakeMove(Guid lobbyId, string playerId, int row, int column, out CellValue[,] field, out CellValue? winner)
     {
         var lobby = _lobbiesManager.GetLobby(lobbyId);
 

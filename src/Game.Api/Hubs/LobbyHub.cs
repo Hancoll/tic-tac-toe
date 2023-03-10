@@ -23,7 +23,7 @@ public class LobbyHub : Hub
         }
     }
 
-    public async Task MakeMove(Guid lobbyId, byte row, byte column)
+    public async Task MakeMove(Guid lobbyId, int row, int column)
     {
         try
         {

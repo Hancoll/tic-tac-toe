@@ -9,5 +9,5 @@ public interface ILobbyService
     void JoinLobby(Guid lobbyId, string playerId);
 
     /// <returns>Returns true if player win.</returns>
-    bool MakeMove(Guid lobbyId, string playerId, byte row, byte column, out CellValue[,] field, out CellValue? winner);
+    bool MakeMove(Guid lobbyId, string playerId, int row, int column, out CellValue[,] field, out CellValue? winner);
 }
